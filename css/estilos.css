@@ -150,6 +150,11 @@ form{
     font-size:36px;
     z-index:100;
   }
+
+  footer {
+    bottom: 0;
+    width: 100%;
+}
   
 
 
