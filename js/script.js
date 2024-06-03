@@ -1,20 +1,21 @@
-// Preguntar al usuario su año de nacimiento
-let nacimiento = prompt("Por favor, ingresa tu año de nacimiento:");
-let fecha = parseInt(nacimiento);
-
-// Verificar si el año de nacimiento es un número válido
-if (isNaN(fecha)) {
-    alert("Por favor, ingresa un año de nacimiento válido.");
-} else {
-    // Calcular la edad del usuario
-    let year = 2024;
-    let edad = year - fecha;
-
-    // Verificar si el usuario es mayor de 18 años
+window.onload = function() {
+    // Solicitar el año de nacimiento
+    let nacimiento = prompt("Por favor, ingrese su año de nacimiento:");
+    
+    // Obtener el año actual
+    let actual = new Date().getFullYear();
+    
+    // Calcular la edad
+    let edad = actual - nacimiento;
+    
+    // Verificar si es mayor de 18 años
     if (edad >= 18) {
-        alert("Bienvenido al sitio.");
+        // Solicitar el nombre
+        let name = prompt("Por favor, ingrese su nombre:");
+        // Mostrar el mensaje de bienvenida
+        alert("Bienvenido " + name);
     } else {
-        alert("Entra bajo tu responsabilidad.");
+        // Mostrar mensaje de ingreso bajo responsabilidad
+        alert("Estás ingresando bajo tu responsabilidad.");
     }
-}
-
+};
